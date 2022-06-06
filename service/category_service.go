@@ -1,7 +1,7 @@
 package service
 
 import (
-	"Ramdoni007/Learn-Golang-RestFullAPI/model/web "
+	"Ramdoni007/Learn-Golang-RestFullAPI/model/web"
 	"context"
 )
 

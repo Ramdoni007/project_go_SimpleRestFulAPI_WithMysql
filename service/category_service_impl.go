@@ -3,7 +3,7 @@ package service
 import (
 	"Ramdoni007/Learn-Golang-RestFullAPI/helper"
 	"Ramdoni007/Learn-Golang-RestFullAPI/model/domain"
-	"Ramdoni007/Learn-Golang-RestFullAPI/model/web "
+	"Ramdoni007/Learn-Golang-RestFullAPI/model/web"
 	"Ramdoni007/Learn-Golang-RestFullAPI/repository"
 	"context"
 	"database/sql"

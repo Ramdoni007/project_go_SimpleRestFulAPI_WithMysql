@@ -2,7 +2,7 @@ package helper
 
 import (
 	"Ramdoni007/Learn-Golang-RestFullAPI/model/domain"
-	"Ramdoni007/Learn-Golang-RestFullAPI/model/web "
+	"Ramdoni007/Learn-Golang-RestFullAPI/model/web"
 )
 
 func ToCategoryRespone(category domain.Category) web.CategoryRespone {
