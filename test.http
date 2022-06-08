@@ -10,8 +10,6 @@ Content-Type: application/json
 {
 "name": "PC GAMING NVIDIA 750TX"
 }
-
-
 ###DELETE NEW CATEGORY
 DELETE http://localhost:3000/api/categories/1
 Accept: application/json
