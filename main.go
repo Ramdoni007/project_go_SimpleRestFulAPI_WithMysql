@@ -3,6 +3,7 @@ package main
 import (
 	"Ramdoni007/Learn-Golang-RestFullAPI/app"
 	"Ramdoni007/Learn-Golang-RestFullAPI/controller"
+	"Ramdoni007/Learn-Golang-RestFullAPI/exception"
 	"Ramdoni007/Learn-Golang-RestFullAPI/helper"
 	"Ramdoni007/Learn-Golang-RestFullAPI/repository"
 	"Ramdoni007/Learn-Golang-RestFullAPI/service"
@@ -26,6 +27,8 @@ func main() {
 	router.POST("/api/categories", categoryController.Create)
 	router.PUT("/api/categories/:categoryId", categoryController.Update)
 	router.DELETE("/api/categories/:categoryId", categoryController.Delete)
+
+	router.PanicHandler = exception.ErrorHandler
 
 	server := http.Server{
 		Addr:    "localhost:3000",

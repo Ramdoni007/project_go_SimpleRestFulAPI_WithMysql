@@ -30,7 +30,7 @@ func (controller *CategoryControllerImplementation) Create(writer http.ResponseW
 		Status: "Ok",
 		Data:   categoryResponse,
 	}
-	helper.WiteResponseBody(writer, webResponse)
+	helper.WriterToResponseBody(writer, webResponse)
 
 }
 
@@ -51,7 +51,7 @@ func (controller *CategoryControllerImplementation) Update(writer http.ResponseW
 		Data:   categoryResponse,
 	}
 
-	helper.WiteResponseBody(writer, webResponse)
+	helper.WriterToResponseBody(writer, webResponse)
 
 }
 
@@ -67,7 +67,7 @@ func (controller *CategoryControllerImplementation) Delete(writer http.ResponseW
 		Status: "Ok",
 	}
 
-	helper.WiteResponseBody(writer, webResponse)
+	helper.WriterToResponseBody(writer, webResponse)
 
 }
 
@@ -82,7 +82,7 @@ func (controller *CategoryControllerImplementation) FindById(writer http.Respons
 		Status: "Ok",
 		Data:   categoryResponse,
 	}
-	helper.WiteResponseBody(writer, webResponse)
+	helper.WriterToResponseBody(writer, webResponse)
 }
 
 func (controller *CategoryControllerImplementation) FindAll(writer http.ResponseWriter, request *http.Request, params httprouter.Params) {
@@ -93,5 +93,5 @@ func (controller *CategoryControllerImplementation) FindAll(writer http.Response
 		Status: "Ok",
 		Data:   categoryResponses,
 	}
-	helper.WiteResponseBody(writer, webResponse)
+	helper.WriterToResponseBody(writer, webResponse)
 }

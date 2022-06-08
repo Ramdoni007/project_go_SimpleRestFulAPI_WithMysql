@@ -8,8 +8,13 @@ Accept: application/json
 Content-Type: application/json
 
 {
-"name": "PC GAMING NVIDIA 750TX"
+  "name": ""
 }
+
+### GET CATEGORY BY Id
+GET http://Localhost:3000/api/categories/124
+Accept: application/json
+
 ###DELETE NEW CATEGORY
-DELETE http://localhost:3000/api/categories/1
+DELETE http://localhost:3000/api/categories/2
 Accept: application/json
