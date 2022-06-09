@@ -27,7 +27,7 @@ func NewCategoryService(categoryRepository repository.CategoryRepository, DB *sq
 
 func (service *CategoryServiceImpl) Create(ctx context.Context, request web.CategoryCreateRequest) web.CategoryRespone {
 	err := service.Validate.Struct(request)
-	exception.ErrorHandler()
+	helper.PanicIfError(err)
 	tx, err := service.DB.Begin()
 	helper.PanicIfError(err)
 	defer helper.CommitOrRollback(tx)

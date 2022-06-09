@@ -5,6 +5,7 @@ import (
 	"Ramdoni007/Learn-Golang-RestFullAPI/controller"
 	"Ramdoni007/Learn-Golang-RestFullAPI/exception"
 	"Ramdoni007/Learn-Golang-RestFullAPI/helper"
+	"Ramdoni007/Learn-Golang-RestFullAPI/middleware"
 	"Ramdoni007/Learn-Golang-RestFullAPI/repository"
 	"Ramdoni007/Learn-Golang-RestFullAPI/service"
 	"github.com/go-playground/validator/v10"
@@ -32,7 +33,7 @@ func main() {
 
 	server := http.Server{
 		Addr:    "localhost:3000",
-		Handler: router,
+		Handler: middleware.NewAuthMiddleware(router),
 	}
 
 	err := server.ListenAndServe()

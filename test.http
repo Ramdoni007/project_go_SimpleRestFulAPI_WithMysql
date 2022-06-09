@@ -1,20 +1,33 @@
 ##GET ALL CATEGORY
 GET http://localhost:3000/api/categories
+X-API-Key: RAHASIA
 Accept: application/json
 
 ###CREATE NEW CATEGORY
 POST http://localhost:3000/api/categories
+X-API-Key: RAHASIA
 Accept: application/json
 Content-Type: application/json
 
 {
-  "name": ""
+  "name": "PC GAMING X4546Y SERIES Hercules"
+}
+
+### UPDATE CATEGORY By ID
+PUT http://localhost:3000/api/categories/8
+X-API-Key: RAHASIA
+Content-Type: application/json
+
+{
+"name": "PC ASUS SERIES POSEIDON XZ454"
 }
 
 ### GET CATEGORY BY Id
-GET http://Localhost:3000/api/categories/124
+GET http://Localhost:3000/api/categories/8
+X-API-Key: RAHASIA
 Accept: application/json
 
 ###DELETE NEW CATEGORY
-DELETE http://localhost:3000/api/categories/2
+DELETE http://localhost:3000/api/categories/7
+X-API-Key: RAHASIA
 Accept: application/json
